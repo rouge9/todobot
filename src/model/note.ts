@@ -13,12 +13,6 @@
 // const Note = mongoose.model<INote>("User", NoteSchema);
 // export default Note;
 
-interface INote {
-  id: string;
-  title: string;
-  content: string;
-}
-
 const notes = [
   {
     id: "1",

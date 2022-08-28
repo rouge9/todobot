@@ -1,8 +1,8 @@
-import express from "express";
+import express, { Request, Response } from "express";
 import { notes } from "../model/note";
 const router = express.Router();
 
-router.post("/note", (req, res) => {
+router.post("/note", (req: Request, res: Response) => {
   const note = req.body;
 
   notes.push(note);
@@ -10,11 +10,11 @@ router.post("/note", (req, res) => {
   return res.send(note);
 });
 
-router.get("/note", (req, res) => {
+router.get("/note", (req: Request, res: Response) => {
   return res.send(notes);
 });
 
-router.put("/note/:id", (req, res) => {
+router.put("/note/:id", (req: Request, res: Response) => {
   const id = req.params;
   const item = req.body;
   console.log(id.id);
@@ -31,7 +31,7 @@ router.put("/note/:id", (req, res) => {
   });
 });
 
-router.delete("/note/:id", (req, res) => {
+router.delete("/note/:id", (req: Request, res: Response) => {
   const id = req.params;
 
   notes.pop();
