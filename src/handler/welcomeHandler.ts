@@ -10,13 +10,13 @@ const welcomeHandler = (bot: Telegraf) => {
   bot.action(welcomeAction, (ctx: Context) => {
     const symbol = ctx.callbackQuery?.data;
     if (symbol == "create") {
-      NewNote(ctx);
+      NewNote(bot, ctx);
     } else if (symbol == "show") {
-      ShowNote(ctx);
+      ShowNote(bot, ctx);
     } else if (symbol == "edit") {
-      EditNote(ctx);
+      EditNote(bot, ctx);
     } else if (symbol == "delete") {
-      DeleteNote(ctx);
+      DeleteNote(bot, ctx);
     } else {
       ctx.reply("wrong entry");
     }

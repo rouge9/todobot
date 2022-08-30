@@ -1,6 +1,6 @@
-import { Context } from "telegraf";
+import { Context, Telegraf } from "telegraf";
 
-const EditNote = (ctx: Context): Context => {
+const EditNote = (bot: Telegraf, ctx: Context): Context => {
   ctx.answerCbQuery();
   ctx.reply("Note Edited");
   return ctx;

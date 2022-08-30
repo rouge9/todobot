@@ -6,18 +6,18 @@ import ShowNote from "../actions/showNote";
 
 const NoteHears = (bot: Telegraf) => {
   bot.hears("New Note", (ctx: Context) => {
-    NewNote(ctx);
+    NewNote(bot, ctx);
   });
 
   bot.hears("Show Note", (ctx: Context) => {
-    ShowNote(ctx);
+    ShowNote(bot, ctx);
   });
 
   bot.hears("Edit Note", (ctx: Context) => {
-    EditNote(ctx);
+    EditNote(bot, ctx);
   });
   bot.hears("Delete Note", (ctx: Context) => {
-    DeleteNote(ctx);
+    DeleteNote(bot, ctx);
   });
 };
 

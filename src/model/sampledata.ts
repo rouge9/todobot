@@ -1,7 +1,7 @@
 const sampledata = [
   {
     id: 1,
-    tittle: "note1",
+    title: "note1",
     content: "content1",
   },
   {
@@ -10,3 +10,5 @@ const sampledata = [
     content: "content2",
   },
 ];
+
+export { sampledata };

@@ -1,6 +1,6 @@
-import { Context } from "telegraf";
+import { Context, Telegraf } from "telegraf";
 
-const DeleteNote = (ctx: Context): Context => {
+const DeleteNote = (bot: Telegraf, ctx: Context): Context => {
   ctx.answerCbQuery();
   ctx.reply("Note Deleted");
   return ctx;
