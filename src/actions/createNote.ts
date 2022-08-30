@@ -1,4 +1,5 @@
-import { Context } from "telegraf";
+import { Context, Telegraf } from "telegraf";
+import { sampledata } from "../model/sampledata";
 
 interface INote {
   id: number;
@@ -6,10 +7,8 @@ interface INote {
   content: string;
 }
 
-const NewNote = (ctx: Context): Context => {
-  // const note: INote =
-  ctx.answerCbQuery();
-  ctx.reply("Note Created");
+const NewNote = (bot: Telegraf, ctx: Context): Context => {
+  ctx.reply("Add title");
 
   return ctx;
 };
