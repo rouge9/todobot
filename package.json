@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tsc-watch --onSuccess \"npm run start\"",
     "build": "tsc",
-    "start": "nodemon dist/bot.js"
+    "start": "nodemon -L dist/bot.js"
   },
   "keywords": [],
   "author": "",

@@ -5,7 +5,7 @@ const Welcome = (ctx: Context): Context => {
   const text = `welcome ${username}, what can i todo u for 🤣`;
 
   ctx
-    .replyWithPhoto({ source: "src/assets/to-do-list.png" }, { caption: text })
+    .replyWithPhoto({ source: "assets/to-do-list.png" }, { caption: text })
     .then(() => {
       button(ctx);
     });
